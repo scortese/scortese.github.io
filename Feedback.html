@@ -1,0 +1,67 @@
+<!DOCTYPE html> 
+<html>
+	<head> 
+		<title>Jquery Restaurant</title> 
+		<meta name="viewport" content="width=device-width, initial-scale=1"> 
+		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+		<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+		<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+	</head> 
+
+	<body>
+
+	<div data-role="page" id="pageone">
+		<div data-role="header">
+			<h1>Restaurant Name</h1>
+		</div>
+		<center><p>Restaurant Welcome information </p></center>
+
+		<div data-role="main" class="ui-content">
+			<h2>Feedback:</h2>
+			<p> Please fill out all the fields, your feedback is important to us </p>
+			<form name="feedback" method="post" action="">
+				<div class="ui-field-contain">
+					<!-- First Name -->
+					<label for="firstname">First name:</label>
+					<input type="text" name="firstname" id="firstname" pattern="[a-zA-z]+" required="true">
+					<!-- Surname -->
+					<label for="surname">Surname:</label>
+					<input type="text" name="surname"id="surname" pattern="[a-zA-z]+" required="true">	
+					<!-- Email -->
+					<label for="email">E-mail:</label>
+					<input type="email" name="email" id="email" placeholder="Your email.." required="true">
+					<!-- Menu Selection -->
+					<label for="day">Select Food:</label>
+					<select required="true">
+						<option value="">Please select</option>
+						<option value="one">1</option>
+						<option value="two">2</option>
+						<option value="three">3</option>
+						<option value="four">4</option>
+						<option value="five">5</option>
+						<option value="six">6</option>
+					</select>
+					<!-- Comments -->
+					<label for="comments">Comments:</label>
+					<textarea name="comments" id="comments" required="true"></textarea>
+				</div>
+					<input type="submit" data-inline="true" value="Submit">
+			</form>
+		</div>
+	<br>
+		<div data-role="footer">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#" data-icon="home">Home</a></li>
+					<li><a href="#" data-rel="back" data-icon="back">Back</a></li>
+					<li><a href="tel:0398256326" data-icon="phone">Call Us</a></li>
+					<li><a href="#" data-icon="search">Search</a></li>
+				</ul>
+			</div>
+				<h4>&copy; Stefano Cortese 2015</h4>
+		</div>
+	</div> 	
+	 
+</body>
+
+</html>
