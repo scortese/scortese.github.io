@@ -1,43 +1,56 @@
 <!DOCTYPE html> 
 <html>
 	<head> 
-		<title>Jquery Restaurant</title> 
+		<title>Spezio Mercato</title> 
 		<meta name="viewport" content="width=device-width, initial-scale=1"> 
 		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
 		<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
 		<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+		<!-- CSS Custom Style sheet, located within themes folder -->
+		<link rel="stylesheet" href="themes/custom.css" />
+		<link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
 	</head> 
 
 	<body>
 
-	<div data-role="page" id="navigation">
-		<div data-role="header">
-			<h1>Restaurant Name</h1>
-		</div>
-		<center><h1>Developer Information</h1></center>
-
-		<div data-role="main" class="ui-content">
-			<p align="center">My name is Stefano Cortese and I’m currently studying a Bachelor of IT within my 3rd year. 
-				The influence behind choosing to base this restaurant on Italian cosine is because most of my family are 
-					from Italy and Italians have a rich culture which is a recipe for amazing meals.<p>
-			<h4 align="center">Contact Information</h4>
-			<p align="center"><strong>Phone No.:</strong>1000 1000</p>
-			<p align="center"><strong>Email:</strong>scortese@outlook.com or scortese@deakin.edu.au</p>
-		<br>
-				
-		</div>
-	<br>
-		<div data-role="footer">
+	<div data-role="page" id="developer">
+		<div data-role="header"  data-position="fixed">
+			<!-- id="Logo" links to the css that references the header image -->
+			<div id="logo">
+				<h1>Spezio Mercato</h1>
+			</div>
+			<!-- Start of navigation bar that has quick buttons for users to use -->
 			<div data-role="navbar">
 				<ul>
 					<li><a href="Home.html" data-icon="home">Home</a></li>
 					<li><a href="#" data-rel="back" data-icon="back">Back</a></li>
 					<li><a href="tel:0390000000" data-icon="phone">Call Us</a></li>
-					<li><a href="#" data-icon="search">Search</a></li>
+					<li><a href="Search.html" data-icon="search">Search</a></li>
+					<li><a href="Location.html" data-rel="dialog" data-icon="location">Location</a></li>
 				</ul>
 			</div>
-				<h4>&copy; Stefano Cortese 2015</h4>
+			<!-- End of navigation bar -->
 		</div>
+		<!-- End of header -->
+		<center><h1>Developer Information</h1></center>
+		
+		<!-- Developer infromation -->		
+		<div data-role="main" class="ui-content">
+			<p align="center"><img src="themes/images/developer.png" ><p>
+			<p align="center">My name is Stefano Cortese and Im currently studying a Bachelor of IT within my 3rd year. 
+				The influence behind choosing to base this restaurant on Italian cosine is because most of my family are 
+					from Italy and Italians have a rich culture which is a recipe for amazing meals.<p>
+			<h4 align="center">Contact Information</h4>
+			<p align="center"><strong>Phone No.:</strong>1000 1000</p>
+			<p align="center"><strong>Email:</strong>scortese@outlook.com or scortese@deakin.edu.au</p>		
+		</div>
+		<!-- end of developer information -->
+	<br>
+		<!-- Start of footer to show the developer of the web app -->
+		<div data-role="footer" data-position="fixed">
+			<h4>&copy; Stefano Cortese 2015</h4>
+		</div>
+		<!-- End of footer -->
 	</div> 	
 	 
 </body>

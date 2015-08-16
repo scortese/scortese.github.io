@@ -1,35 +1,56 @@
 <!DOCTYPE html> 
 <html>
 	<head> 
-		<title>Jquery Restaurant</title> 
+		<title>Spezio Mercato</title> 
 		<meta name="viewport" content="width=device-width, initial-scale=1"> 
 		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
 		<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
 		<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+		<!-- CSS Custom Style sheet, located within themes folder -->
+		<link rel="stylesheet" href="themes/custom.css" />
+		<link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
 	</head> 
 
 	<body>
 
-	<div data-role="page" id="Menu">
-		<div data-role="header">
-			<h1>Restaurant Name</h1>
+	<!-- Start of content -->
+	<div data-role="page" id="beverages">
+		<div data-role="header"  data-position="fixed">
+			<!-- id="Logo" links to the css that references the header image -->
+			<div id="logo">
+				<h1>Spezio Mercato</h1>
+			</div>
+			<!-- Start of navigation bar that has quick buttons for users to use -->
+			<div data-role="navbar">
+				<ul>
+					<li><a href="Home.html" data-icon="home">Home</a></li>
+					<li><a href="#" data-rel="back" data-icon="back">Back</a></li>
+					<li><a href="tel:0390000000" data-icon="phone">Call Us</a></li>
+					<li><a href="Search.html" data-icon="search">Search</a></li>
+					<li><a href="Location.html" data-rel="dialog" data-icon="location">Location</a></li>
+				</ul>
+			</div>
+			<!-- End of navigation bar -->
 		</div>
-		<!-- Mains Content -->
+		<!-- End of header -->
+		
+		<!-- Beverages Content -->
 		<div data-role="main" class="ui-content">
 			<h2>Beverages:</h2>
 			<!-- Collapsible Menu -->
 			<!-- Beverages 1 -->
 			<div data-role="collapsible">
-				<img src="" class="ui-li-icon"> <h3>Mineral Water</h3>
+				<img src="themes/images/water.png" class="ui-li-icon"> <h3>Mineral Water</h3>
 					<h4> Type </h4>
 						<ul>
 							<li>San Pellegrino</li>
 						</ul>
+					<a href="https://www.flickr.com/photos/31927948@N08/8764139434/" target="_blank">Go To Photograph Reference</a>
 			</div>
 			
 			<!-- Beverages 2 -->
 			<div data-role="collapsible">
-				<img src="" class="ui-li-icon"> <h3>Soft Drinks</h3>
+				<img src="themes/images/rasp.png" class="ui-li-icon"> <h3>Soft Drinks</h3>
 					<h4> Type </h4>
 						<ul>
 							<li>Coke</li>
@@ -37,11 +58,12 @@
 							<li>Lemonade</li>
 							<li>Orange</li>
 						</ul>
+					<a href="https://upload.wikimedia.org/wikipedia/commons/f/f4/Raspberryade.jpg" target="_blank">Go To Photograph Reference</a>
 			</div>
 			
 			<!-- Beverages 3 -->
 			<div data-role="collapsible">
-				<img src="" class="ui-li-icon"> <h3>Wine</h3>
+				<img src="themes/images/wine.png" class="ui-li-icon"> <h3>Wine</h3>
 					<h4> Type </h4>
 						<ul>
 							<li>Sauvignon Blanc</li>
@@ -49,22 +71,19 @@
 							<li>Chardonnay</li>
 							<li>Riesling</li>
 						</ul>
+					<a href="https://pixabay.com/en/wine-red-wine-glass-drink-alcohol-541922/" target="_blank">Go To Photograph Reference</a>
 			</div>
 			<!-- End of Beverages -->
 		</div>
-	<br>
-		<div data-role="footer">
-			<div data-role="navbar">
-				<ul>
-					<li><a href="#" data-icon="home">Home</a></li>
-					<li><a href="#" data-rel="back" data-icon="back">Back</a></li>
-					<li><a href="tel:0398256326" data-icon="phone">Call Us</a></li>
-					<li><a href="#" data-icon="search">Search</a></li>
-				</ul>
-			</div>
-				<h4>&copy; Stefano Cortese 2015</h4>
+		<!-- End of Beverages content -->
+		<br>
+		<!-- Start of footer to show the developer of the web app -->
+		<div data-role="footer" data-position="fixed">
+			<h4>&copy; Stefano Cortese 2015</h4>
 		</div>
-	</div> 	
+		<!-- End of footer -->
+	</div>
+	<!-- End of content -->
 	 
 </body>
 

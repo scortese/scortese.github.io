@@ -1,26 +1,46 @@
 <!DOCTYPE html> 
 <html>
 	<head> 
-		<title>Jquery Restaurant</title> 
+		<title>Spezio Mercato</title> 
 		<meta name="viewport" content="width=device-width, initial-scale=1"> 
 		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
 		<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
 		<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+		<!-- CSS Custom Style sheet, located within themes folder -->
+		<link rel="stylesheet" href="themes/custom.css" />
+		<link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
 	</head> 
 
 	<body>
 
-	<div data-role="page" id="Menu">
-		<div data-role="header">
-			<h1>Restaurant Name</h1>
+	<!-- Start of content -->
+	<div data-role="page" id="appetizers">
+		<div data-role="header"  data-position="fixed">
+			<!-- id="Logo" links to the css that references the header image -->
+			<div id="logo">
+				<h1>Spezio Mercato</h1>
+			</div>
+			<!-- Start of navigation bar that has quick buttons for users to use -->
+			<div data-role="navbar">
+				<ul>
+					<li><a href="Home.html" data-icon="home">Home</a></li>
+					<li><a href="#" data-rel="back" data-icon="back">Back</a></li>
+					<li><a href="tel:0390000000" data-icon="phone">Call Us</a></li>
+					<li><a href="Search.html" data-icon="search">Search</a></li>
+					<li><a href="Location.html" data-rel="dialog" data-icon="location">Location</a></li>
+				</ul>
+			</div>
+			<!-- End of navigation bar -->
 		</div>
+		<!-- End of header -->
+		
 		<!-- Appetizer Content -->
 		<div data-role="main" class="ui-content">
 			<h2>Appetizers:</h2>
 			<!-- Collapsible Menu -->
 			<!-- Appetizer 1 -->
 			<div data-role="collapsible">
-				<img src="" class="ui-li-icon"> <h3>Bruschetta with Balsamic Reduction</h3>
+				<img src="themes/images/bruschetta.png" class="ui-li-icon"> <h3>Bruschetta with Balsamic Reduction</h3>
 					<h4> Recipe </h4>
 						<ul>
 							<li>wood-fired bread</li>
@@ -31,20 +51,22 @@
 							<li>shredded parmesan</li>
 							<li>sprinkle of balsamic reduction</li>
 						</ul>
+					<a href="https://upload.wikimedia.org/wikipedia/commons/1/1f/2014_Bruschetta_The_Larder_Chiang_Mai.jpg" target="_blank">Go To Photograph Reference</a>
 			</div>
 			<!-- Appetizer 2 -->
 			<div data-role="collapsible">
-				<img src="" class="ui-li-icon"> <h3>Spicy Olive Oil and Vinegar Bread Dip</h3>
+				<img src="themes/images/dip.png" class="ui-li-icon"> <h3>Spicy Olive Oil and Vinegar Bread Dip</h3>
 					<h4> Recipe </h4>
 						<ul>
 							<li>spicy olive oil</li>
 							<li>dash of vinegar</li>
 							<li>wood-fired bread</li>
 						</ul>
+					<a href="http://eduudle.com/bread-dipping-oil-and-balsamic-vinegar-27109" target="_blank">Go To Photograph Reference</a>					
 			</div>
 			<!-- Appetizer 3 -->
 			<div data-role="collapsible">
-				<img src="" class="ui-li-icon"> <h3>Caprese Salad</h3>
+				<img src="themes/images/salad.png" class="ui-li-icon"> <h3>Caprese Salad</h3>
 					<h4> Recipe </h4>
 						<ul>
 							<li>sliced tomato</li>
@@ -52,10 +74,11 @@
 							<li>fresh basil leaves</li>
 							<li>dash of olive oil</li>
 						</ul>
+					<a href="https://www.flickr.com/photos/amlamster/6662178673" target="_blank">Go To Photograph Reference</a>
 			</div>
 			<!-- Appetizer 4 -->
 			<div data-role="collapsible">
-				<img src="" class="ui-li-icon"> <h3>Fried White Bait with Tartare sauce and salad</h3>
+				<img src="themes/images/bait.png" class="ui-li-icon"> <h3>Fried White Bait with Tartare sauce and salad</h3>
 					<h4> Recipe </h4>
 						<ul>
 							<li>fried white bait</li>
@@ -69,22 +92,19 @@
 							<li>djion mustard</li>
 							</ul>
 						</ul>
+					<a href="https://www.flickr.com/photos/avlxyz/128319307/" target="_blank">Go To Photograph Reference</a>	
 			</div>
 			<!-- End of Appetizers -->
 		</div>
-	<br>
-		<div data-role="footer">
-			<div data-role="navbar">
-				<ul>
-					<li><a href="#" data-icon="home">Home</a></li>
-					<li><a href="#" data-rel="back" data-icon="back">Back</a></li>
-					<li><a href="tel:0398256326" data-icon="phone">Call Us</a></li>
-					<li><a href="#" data-icon="search">Search</a></li>
-				</ul>
-			</div>
-				<h4>&copy; Stefano Cortese 2015</h4>
+		<!-- End of Appetizers Content -->
+		<br>
+		<!-- Start of footer to show the developer of the web app -->
+		<div data-role="footer" data-position="fixed">
+			<h4>&copy; Stefano Cortese 2015</h4>
 		</div>
-	</div> 	
+		<!-- End of footer -->
+	</div>
+	<!-- End of content -->
 	 
 </body>
 

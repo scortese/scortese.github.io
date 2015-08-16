@@ -13,7 +13,7 @@
 
 	<body>
 	<!-- Start of content -->
-	<div data-role="page" id="feedback">
+	<div data-role="page" id="search">
 		<div data-role="header"  data-position="fixed">
 			<!-- id="Logo" links to the css that references the header image -->
 			<div id="logo">
@@ -31,41 +31,33 @@
 			</div>
 			<!-- End of navigation bar -->
 		</div>	
-		<!-- Start of Feedback form content -->
+		<!-- Start of Search content -->
 		<div data-role="main" class="ui-content">
-			<h2>Feedback:</h2>
-			<p> Please fill out all the fields, your feedback is important to us </p>
-			<form name="feedback" method="post" action="">
-				<div class="ui-field-contain">
-					<!-- First Name -->
-					<label for="firstname">First name:</label>
-					<input type="text" name="firstname" id="firstname" pattern="[a-zA-z]+" required="true">
-					<!-- Surname -->
-					<label for="surname">Surname:</label>
-					<input type="text" name="surname"id="surname" pattern="[a-zA-z]+" required="true">	
-					<!-- Email -->
-					<label for="email">E-mail:</label>
-					<input type="email" name="email" id="email" placeholder="Your email.." required="true">
-					<!-- Selection for being more specific on your feedback -->
-					<label for="day">Selection:</label>
-					<select required="true">
-						<option value="">Please be specific...</option>
-						<option value="one">Spezio Mercato</option>
-						<option value="two">Appetizers</option>
-						<option value="three">Mains</option>
-						<option value="four">Beverages</option>
-						<option value="five">Desserts</option>
-					</select>
-					<!-- Comments -->
-					<label for="comments">Comments:</label>
-					<textarea name="comments" id="comments" required="true"></textarea>
-				</div>
-					<!-- Submit and Reset buttons -->
-					<center>
-					<input type="submit" data-inline="true" value="Submit">
-					<input type="reset" data-inline="true" value="reset" >
-					</center>
+			<h2>Search:</h2>
+			<!-- search form -->
+			<form class="ui-filterable">
+				<input id="myFilter" data-type="search">
 			</form>
+			<!-- end of search form -->
+			<!-- Search list, this is used as the basis of the search. It uses filterable elements -->
+			<!-- filterable elements were put in alphabetical order to create a more unified search -->
+			<ul data-role="listview" data-filter="true" data-input="#myFilter" data-autodividers="true" data-inset="true">
+				<li><a href="Desserts.html">Affogato</a></li>
+				<li><a href="Appetizers.html">Bruschetta</a></li>
+				<li><a href="Appetizers.html">Caprese Salad</a></li>
+				<li><a href="Mains.html">Chicken Cacciatore</a></li>
+				<li><a href="Desserts.html">Coffee and Biscuit</a></li>
+				<li><a href="Mains.html">Eggplant Parmigiana</a></li>
+				<li><a href="Appetizers.html">Fried White Bait with Sauce and Salad</a></li>
+				<li><a href="Beverages.html">Mineral Water</a></li>
+				<li><a href="Mains.html">Pizza</a></li>
+				<li><a href="Mains.html">Pasta</a></li>
+				<li><a href="Appetizers.html">Spicy Olive Oil and Vinegar Bread Dip</a></li>
+				<li><a href="Beverages.html">Soft Drinks</a></li>
+				<li><a href="Desserts.html">Tiramisu</a></li>
+				<li><a href="Beverages.html">Wine</a></li>
+			</ul>
+			<!-- end of search list -->
 		</div>
 		<!-- End of feedback form content -->
 		<br>

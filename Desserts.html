@@ -14,7 +14,7 @@
 	<body>
 
 	<!-- Start of content -->
-	<div data-role="page" id="menu">
+	<div data-role="page" id="desserts">
 		<div data-role="header"  data-position="fixed">
 			<!-- id="Logo" links to the css that references the header image -->
 			<div id="logo">
@@ -33,25 +33,51 @@
 			<!-- End of navigation bar -->
 		</div>
 		<!-- End of header -->
-		<center><h1>Menu</h1></center>
-		<center><p>Select to view the range we offer</p></center>
-		<!-- Start of Menu Content, has external links to where the items/recipes are -->
+		
+		<!-- Desserts Content -->
 		<div data-role="main" class="ui-content">
-			<!-- List view with buttons to external pages -->
-			<!-- this will make use of the back buttons and cleans up the menu page so the use doesn't have to scroll just has to select the course they wish to view -->
-			<ul data-role="listview">
-				<li data-role="divider"></li>
-				<li><a href="Appetizers.html">Appetizers</a></li>
-				<li data-role="divider"></li>
-				<li><a href="Mains.html">Mains</a></li>
-				<li data-role="divider"></li>
-				<li><a href="Beverages.html">Beverages</a></li>
-				<li data-role="divider"></li>
-				<li><a href="Desserts.html">Desserts</a></li>
-				<li data-role="divider"></li>
-			</ul>
+			<h2>Desserts:</h2>
+			<!-- Collapsible Menu -->
+			<!-- Desserts 1 -->
+			<div data-role="collapsible">
+				<img src="themes/images/tiramasu.png" class="ui-li-icon"> <h3>Tiramisu</h3>
+					<h4> Recipe </h4>
+						<ul>
+							<li>Sponge finger biscuits</li>
+							<li>Low-fat ricotta</li>
+							<li>Milk</li>
+							<li>Cocoa powder</li>
+							<li>Coffee flavored liqueur</li>
+						</ul>
+					<a href="https://pixabay.com/en/dessert-tiramisu-delicious-375324/" target="_blank">Go To Photograph Reference</a>	
+			</div>
+			
+			<!-- Desserts 2 -->
+			<div data-role="collapsible">
+				<img src="themes/images/affogato.png" class="ui-li-icon"> <h3>Affogato</h3>
+					<h4> Recipe </h4>
+						<ul>
+							<li>Espresso coffee</li>
+							<li>Italian liqueur armaretto</li>
+							<li>Vanilla ice cream</li>
+						</ul>
+					<a href="https://pixabay.com/en/affogato-ice-cream-coffee-cafe-623516/" target="_blank">Go To Photograph Reference</a>	
+			</div>
+			<!-- End of Desserts -->
+			
+			<!-- Desserts 3 -->
+			<div data-role="collapsible">
+				<img src="themes/images/coffee.png" class="ui-li-icon"> <h3>Coffee and Biscuit</h3>
+					<h4> Recipe </h4>
+						<ul>
+							<li>Choice of coffee (espresso, short or long black, latte etc.)</li>
+							<li>With a classic Italian biscuit called crostoli</li>
+						</ul>
+					<a href="https://pixabay.com/en/sweet-cookies-coffee-food-biscuits-255602/" target="_blank">Go To Photograph Reference</a>	
+			</div>
+			<!-- End of Desserts -->
 		</div>
-		<!-- End of Menu Content -->
+		<!-- End of content -->
 		<br>
 		<!-- Start of footer to show the developer of the web app -->
 		<div data-role="footer" data-position="fixed">
@@ -59,8 +85,8 @@
 		</div>
 		<!-- End of footer -->
 	</div>
-	<!-- End of content -->	
-
+	<!-- End of content -->
+	 
 </body>
 
 </html>

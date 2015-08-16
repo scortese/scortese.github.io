@@ -1,27 +1,48 @@
 <!DOCTYPE html> 
 <html>
 	<head> 
-		<title>Jquery Restaurant</title> 
+		<title>Spezio Mercato</title> 
 		<meta name="viewport" content="width=device-width, initial-scale=1"> 
 		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
 		<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
 		<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+		<!-- CSS Custom Style sheet, located within themes folder -->
+		<link rel="stylesheet" href="themes/custom.css" />
+		<link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
 	</head> 
 
 	<body>
 
-	<div data-role="page" id="Menu">
-		<div data-role="header">
-			<h1>Restaurant Name</h1>
+	<!-- Start of content -->
+	<div data-role="page" id="mains">
+		<div data-role="header"  data-position="fixed">
+			<!-- id="Logo" links to the css that references the header image -->
+			<div id="logo">
+				<h1>Spezio Mercato</h1>
+			</div>
+			<!-- Start of navigation bar that has quick buttons for users to use -->
+			<div data-role="navbar">
+				<ul>
+					<li><a href="Home.html" data-icon="home">Home</a></li>
+					<li><a href="#" data-rel="back" data-icon="back">Back</a></li>
+					<li><a href="tel:0390000000" data-icon="phone">Call Us</a></li>
+					<li><a href="Search.html" data-icon="search">Search</a></li>
+					<li><a href="Location.html" data-rel="dialog" data-icon="location">Location</a></li>
+				</ul>
+			</div>
+			<!-- End of navigation bar -->
 		</div>
+		<!-- End of header -->
+		
 		<!-- Mains Content -->
 		<div data-role="main" class="ui-content">
 			<h2>Mains:</h2>
 			<!-- Collapsible Menu -->
 			<!-- Main 1 -->
 			<div data-role="collapsible">
-				<img src="" class="ui-li-icon"> <h3>Pizza (more to come)</h3>
-					<h4> Pizza Bianco </h4>
+				<img src="themes/images/pizza.png" class="ui-li-icon"> <h3>Pizza (more to come)</h3>
+					<h4> Recipe  </h4>
+					<p> Pizza Bianco:  </p>
 						<ul>
 							<li>Extra virgin olive oil</li>
 							<li>Rosemary leaves</li>
@@ -31,10 +52,11 @@
 							<li>Prosciutto slices</li>
 							<li>Baby spinach leaves</li>
 						</ul>
+					<a href="https://pixabay.com/en/pizza-pizza-service-italian-eat-346985/" target="_blank">Go To Photograph Reference</a>
 			</div>
 			<!-- Main 2 -->
 			<div data-role="collapsible">
-				<img src="" class="ui-li-icon"> <h3>Egglant Parmigiana</h3>
+				<img src="themes/images/eggplant.png" class="ui-li-icon"> <h3>Egglant Parmigiana</h3>
 					<h4> Recipe </h4>
 						<ul>
 							<li>Fried Eggplant cut into slices</li>
@@ -45,11 +67,13 @@
 							<li>Finely cut basil leaves</li>
 							<li>Finely grated parmesan cheese</li>
 						</ul>
+					<a href="http://www.rudilechners.com/food/eggplant-parmigiana-dinner/" target="_blank">Go To Photograph Reference</a>
 			</div>
 			<!-- Main 3 -->
 			<div data-role="collapsible">
-				<img src="" class="ui-li-icon"> <h3>Pasta (more to come)</h3>
-					<h4> Carbornara </h4>
+				<img src="themes/images/pasta.png" class="ui-li-icon"> <h3>Pasta (more to come)</h3>
+					<h4> Recipe  </h4>
+					<p> Carbonara:  </p>
 						<ul>
 							<li>Spaghetti</li>
 							<li>Sprinkle of olive oil</li>
@@ -60,10 +84,11 @@
 							<li>Grated parmesan</li>
 							<li>Chopped parsley leaves</li>
 						</ul>
+					<a href="https://pixabay.com/en/pasta-carbonara-spaghetti-712664/" target="_blank">Go To Photograph Reference</a>				
 			</div>
 			<!-- Main 4 -->
 			<div data-role="collapsible">
-				<img src="" class="ui-li-icon"> <h3>Chicken Cacciatore</h3>
+				<img src="themes/images/chicken.png" class="ui-li-icon"> <h3>Chicken Cacciatore</h3>
 					<h4> Recipe </h4>
 						<ul>
 							<li>Olive oil</li>
@@ -74,22 +99,19 @@
 							<li>Mushrooms</li>
 							<li>Chilli</li>
 						</ul>
+					<a href="https://www.flickr.com/photos/psejersen/5450599260" target="_blank">Go To Photograph Reference</a>	
 			</div>
 			<!-- End of Main Content -->
 		</div>
-	<br>
-		<div data-role="footer">
-			<div data-role="navbar">
-				<ul>
-					<li><a href="#" data-icon="home">Home</a></li>
-					<li><a href="#" data-rel="back" data-icon="back">Back</a></li>
-					<li><a href="tel:0398256326" data-icon="phone">Call Us</a></li>
-					<li><a href="#" data-icon="search">Search</a></li>
-				</ul>
-			</div>
-				<h4>&copy; Stefano Cortese 2015</h4>
+		<!-- End of Mains content -->
+		<br>
+		<!-- Start of footer to show the developer of the web app -->
+		<div data-role="footer" data-position="fixed">
+			<h4>&copy; Stefano Cortese 2015</h4>
 		</div>
-	</div> 	
+		<!-- End of footer -->
+	</div>
+	<!-- End of content -->
 	 
 </body>
 
