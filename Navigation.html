@@ -9,11 +9,84 @@
 		<!-- CSS Custom Style sheet, located within themes folder -->
 		<link rel="stylesheet" href="themes/custom.css" />
 		<link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
+		<!-- Navigation location google services V3 jquery preset -->
+		<script type="text/javascript" src="http://maps.google.com/maps/api/js?v=3&sensor=false&language=en"></script>
+		<!-- Start of google map location script, set longitude and latitude to chadstone -->
+		<script type="text/javascript">
+            $(document).on("pageinit", "#map_page", function() {
+                initialize();
+            });
+
+            $(document).on('click', '#submit', function(e) {
+                e.preventDefault();
+                calculateRoute();
+            });
+
+            var directionDisplay,
+                directionsService = new google.maps.DirectionsService(),
+                map;
+
+            function initialize() 
+            {
+                directionsDisplay = new google.maps.DirectionsRenderer();
+                var mapCenter = new google.maps.LatLng(-37.886682, 145.080712);
+
+                var myOptions = {
+                    zoom:10,
+                    mapTypeId: google.maps.MapTypeId.ROADMAP,
+                    center: mapCenter
+                }
+
+                map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
+                directionsDisplay.setMap(map);
+                directionsDisplay.setPanel(document.getElementById("directions"));  
+            }
+
+            function calculateRoute() 
+            {
+                var selectedMode = $("#mode").val(),
+                    start = $("#from").val(),
+                    end = $("#to").val();
+
+                if(start == '' || end == '')
+                {
+                    // cannot calculate route
+                    $("#results").hide();
+                    return;
+                }
+                else
+                {
+                    var request = {
+                        origin:start, 
+                        destination:end,
+                        travelMode: google.maps.DirectionsTravelMode[selectedMode]
+                    };
+
+                    directionsService.route(request, function(response, status) {
+                        if (status == google.maps.DirectionsStatus.OK) {
+                            directionsDisplay.setDirections(response); 
+                            $("#results").show();
+                            /*
+                                var myRoute = response.routes[0].legs[0];
+                                for (var i = 0; i < myRoute.steps.length; i++) {
+                                    alert(myRoute.steps[i].instructions);
+                                }
+                            */
+                        }
+                        else {
+                            $("#results").hide();
+                        }
+                    });
+
+                }
+            }
+        </script>
+		<!-- End of google jquery location script -->
 	</head> 
 
 	<body>
 	<!-- Start of content -->
-	<div data-role="page" id="navigation">
+	<div data-role="page" id="map_page">
 		<div data-role="header"  data-position="fixed">
 			<!-- id="Logo" links to the css that references the header image -->
 			<div id="logo">
@@ -33,15 +106,39 @@
 		</div>
 		<!-- End of header -->
 		<center><h1>Locate Us At</h1></center>
-		<!-- Location content, embedded google maps -->
-		<div data-role="main" class="ui-content">
-			<h2>Map Location:</h2>
-			<p><h4> Address: </h4> Chadstone Shopping Centre 1341 Dandenong Road Chadstone VIC 3148</p>
-			<p><h4>Phone No: </h4> 9567-8455</p>
-		<br>
-				<!-- Google Map Location -->
-				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3148.871829686773!2d145.0807!3d-37.88668!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad66a66054c293f%3A0xf0456760532d460!2sChadstone+Shopping+Centre!5e0!3m2!1sen!2sau!4v1439292454734" width="400" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
-		</div>
+		<p><strong>Address:</strong> Chadstone Shopping Centre 1341 Dandenong Road Chadstone VIC 3148</p>
+		<!-- Location content, embedded google maps, input address then click directions to recieve notes below how to get there  -->
+		<div data-role="content">
+            <div class="ui-bar-c ui-corner-all ui-shadow" style="padding:1em;">
+                <div id="map_canvas" style="height:230px;"></div>
+                    <!-- input your location -->
+					<div data-role="fieldcontain">
+                        <label for="from">From</label> 
+                        <input type="text" id="from" value="input your location...."/>
+                    </div>
+					<!-- end of your location input -->
+                    <!-- restaurant location -->
+					<div data-role="fieldcontain">
+                        <label for="to">To</label> 
+                        <input type="text" id="to" value="Chadstone Shopping Centre, Chadstone"/>
+                    </div>
+					<!-- end of restaurant location -->
+					<!-- trasnportation selection -->
+                    <div data-role="fieldcontain">
+                        <label for="mode" class="select">Transportation method:</label>
+                        <select name="select-choice-0" id="mode">
+                            <option value="DRIVING">Driving</option>
+                            <option value="WALKING">Walking</option>
+                            <option value="BICYCLING">Bicycling</option>
+                        </select>
+                    </div>
+					<!-- end of trasnportation selection -->
+                    <a data-icon="search" data-role="button" href="#" id="submit">Get directions</a>
+            </div>
+            <div id="results" style="display:none;">
+                <div id="directions"></div>
+            </div>
+        </div>
 		<!-- End of navigation content -->
 		<br>
 		<!-- Start of footer to show the developer of the web app -->
